@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>dotnet-StockData.Worker-9C9CA7C6-2150-492F-9ABD-89DC50CCF8E1</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="HtmlAgilityPack" Version="1.11.36" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.9">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
+	  <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+	  <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+	  <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="5.0.1" />
+	  <PackageReference Include="Serilog.Extensions.Hosting" Version="4.1.2" />
+	  <PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
+	  <PackageReference Include="Serilog.Settings.Configuration" Version="3.2.0" />
+	  <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StockData.Data\StockData.Data.csproj" />
+    <ProjectReference Include="..\StockData.Scraper\StockData.Scraper.csproj" />
+  </ItemGroup>
+</Project>
