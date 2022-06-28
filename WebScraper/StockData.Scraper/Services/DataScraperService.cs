@@ -1,4 +1,4 @@
-﻿using HtmlAgilityPack;
+using HtmlAgilityPack;
 using StockData.Scraper.UnitOfWorks;
 using System;
 using System.Collections.Generic;
@@ -48,7 +48,7 @@ namespace StockData.Scraper.Services
 
                                 foreach (var again in lineParts)
                                 {
-                                    if (again != "")
+                                    if (!string.IsNullOrEmpty(again))
                                     {
                                         if (again == "--")
                                         {
